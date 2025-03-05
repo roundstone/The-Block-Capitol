@@ -43,7 +43,7 @@ export default function WhoWeAre() {
         <motion.img
           src="./brush-strokes.png"
           alt=""
-          className="absolute left-1/2 top-28 transform -translate-x-1/2 max-w-[336.47px] w-full hidden lg:block"
+          className="absolute left-1/2 top-28 transform -translate-x-1/2 max-w-[256.47px] w-full hidden lg:block"
           width="100%"
           height="auto"
           initial={{ opacity: 0, scale: 0.8 }}
