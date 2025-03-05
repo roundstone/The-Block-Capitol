@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.app_container {
+  @apply w-full px-3 sm:px-4 lg:px-11 xl:px-20 2xl:px-32 mx-auto;
+}
