@@ -34,7 +34,6 @@ const ComingSoon: React.FC<ComingSoonProps> = ({
               <Button
                 text="Close"
                 variant="secondary"
-                // className="mt-4"
                 onClick={() => setIsModalOpen(false)}
               />
             </div>

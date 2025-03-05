@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import ComingSoon from "../modal/coming-soon";
 
 interface ButtonProps {
@@ -8,7 +8,6 @@ interface ButtonProps {
   variant: "primary" | "secondary" | "light";
   className?: string;
   onClick?: () => void;
-  // props: any;
 }
 
 export const Button: React.FC<ButtonProps> = ({

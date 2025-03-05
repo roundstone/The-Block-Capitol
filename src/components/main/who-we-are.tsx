@@ -9,7 +9,7 @@ export default function WhoWeAre() {
   return (
     <section className="bg-white p-10 app_container" ref={ref}>
       <div
-        className="bg-[#F9B6A9]/10 py-16 px-6 md:px-20 text-center rounded-3xl"
+        className="bg-[#F9B6A9]/10 py-16 px-6 md:px-20 text-center rounded-3xl relative"
         style={{
           backgroundImage: "url('src/assets/who-we-are-bg.png')",
           backgroundSize: "cover",
@@ -33,6 +33,33 @@ export default function WhoWeAre() {
           Practical instructions, experienced coaching, and a lively community,
           all in one place.
         </motion.p>
+        {/* <img
+          src="./brush-strokes.png"
+          alt=""
+          className="absolute left-1/2 top-28 transform -translate-x-1/2"
+          width={336.47}
+          height={28.37}
+        /> */}
+        <motion.img
+          src="./brush-strokes.png"
+          alt=""
+          className="absolute left-1/2 top-28 transform -translate-x-1/2 max-w-[336.47px] w-full hidden lg:block"
+          width="100%"
+          height="auto"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        />
+
+        {/* <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="mt-4 text-gray-700"
+        >
+          Practical instructions, experienced coaching, and a lively community,
+          all in one place.
+        </motion.p> */}
 
         <div className="flex justify-center gap-4 mt-6">
           {["/d-1.png", "/d-2.png", "/d-1.png"].map((src, index) => (

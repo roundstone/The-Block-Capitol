@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FiUsers, FiGlobe, FiCode } from "react-icons/fi";
 import { Button } from "../form/button";
 import React, { useRef } from "react";
 import { useIsInView } from "../../hooks/use-inview";

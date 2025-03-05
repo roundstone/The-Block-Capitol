@@ -44,7 +44,7 @@ export default function BuildingTheFuture() {
             initial={{ opacity: 0, y: -10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
-            className="bg-[#FFD2D2] border border-white text-lg shadow-lg px-4 py-2 rounded-md mt-4 inline-block w-fit"
+            className="bg-[#FFD2D2] border border-white text-lg shadow-lg px-6 py-4 rounded-md mt-4 inline-block w-fit leading-6"
           >
             We've stumbled, learned, and gotten better;
             <br className="max-md:hidden" /> Real proof of learning from
