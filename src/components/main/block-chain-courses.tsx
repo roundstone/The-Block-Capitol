@@ -33,33 +33,47 @@ const BlockchainCourses = () => {
 
       <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
         {courses.map((course, index) => (
-          <motion.div
+            <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: index * 0.2, duration: 0.6 }}
             className={`relative flex flex-col gap-5 p-5 max-sm:flex-col max-sm:p-4 ${
-              (index === 1 || index === 5) &&
-              "bg-[url(./vector-long-curve.png)] max-md:hidden bg-no-repeat bg-contain bg-right "
+              index === 1 || index === 5
+                ? "bg-[url(/src/assets/vector-long-curve.png)] max-md:bg-none bg-no-repeat bg-contain bg-right "
+                : ""
             } ${
-              index === 2 &&
-              "bg-[url(./vector-short-curv.png)] max-md:hidden bg-no-repeat bg-contain bg-left "
+              index === 2
+                ? "bg-[url(/src/assets/vector-short-curv.png)] max-md:bg-none bg-no-repeat bg-contain bg-left "
+                : ""
             } ${
-              (index === 0 || index === 4) &&
-              "bg-[url(./long-arrow.png)] max-md:hidden bg-no-repeat bg-top bg-[length:80%]"
+              index === 0 || index === 4
+                ? "bg-[url(/src/assets/long-arrow.png)] max-md:bg-none bg-no-repeat bg-top bg-[length:80%]"
+                : ""
             } ${
-              (index === 20 || index === 6) &&
-              "bg-[url(./long-arrow-left.png)] max-md:hidden bg-no-repeat bg-top bg-[length:80%]"
+              index === 20 || index === 6
+                ? "bg-[url(/src/assets/long-arrow-left.png)] max-md:bg-none bg-no-repeat bg-top bg-[length:80%]"
+                : ""
             } `}
           >
             <div
-              className="absolute -top-1  w-5 h-5 bg-orange-600 hexagon"
+              className="absolute max-md:hidden -top-1  w-5 h-5 bg-orange-600 hexagon"
               aria-hidden="true"
             />
             <div>
-              <h3 className="mb-4 text-2xl font-medium max-sm:text-xl text-[#FF6B4A]">
+              <h3 className="max-md:hidden mb-4 text-2xl font-medium max-sm:text-xl text-[#FF6B4A]">
                 {course.title}
               </h3>
+
+              <div className="hidden max-md:flex items-center gap-2">
+                <div
+                  className="w-5 h-5 bg-orange-600 hexagon"
+                  aria-hidden="true"
+                />
+                <h3 className="text-2xl font-medium max-sm:text-xl text-[#FF6B4A]">
+                  {course.title}
+                </h3>
+              </div>
               <p className="text-base font-light leading-normal text-gray-800">
                 {course.description}
               </p>

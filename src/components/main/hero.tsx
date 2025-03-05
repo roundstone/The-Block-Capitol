@@ -5,7 +5,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="relative -bg-gradient-to-r from-red-50 to-white text-center px-6md:px-12lg:px-24 py-12 bg-[url(./hero-image.png)] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden">
+    <section className="relative -bg-gradient-to-r from-red-50 to-white text-center px-6md:px-12lg:px-24 py-12 bg-[url(/src/assets/hero-image.png)] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden">
       {/* Navigation Bar */}
       <Navbar />
 
