@@ -19,7 +19,7 @@ export default function BuildingTheFuture() {
             className="relative -full border-[10px] border-[#FFD2D2] rounded-[48px] shadow-lg overflow-hidden"
           >
             <img
-              src="/src/assets/hero-lady.png"
+              src="./hero-lady.png"
               alt="Focused Woman"
               width={500}
               height={400}

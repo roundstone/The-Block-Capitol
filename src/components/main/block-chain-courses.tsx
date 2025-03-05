@@ -40,16 +40,16 @@ const BlockchainCourses = () => {
             transition={{ delay: index * 0.2, duration: 0.6 }}
             className={`relative flex flex-col gap-5 p-5 max-sm:flex-col max-sm:p-4 ${
               (index === 1 || index === 5) &&
-              "bg-[url(/src/assets/vector-long-curve.png)] max-md:hidden bg-no-repeat bg-contain bg-right "
+              "bg-[url(./vector-long-curve.png)] max-md:hidden bg-no-repeat bg-contain bg-right "
             } ${
               index === 2 &&
-              "bg-[url(/src/assets/vector-short-curv.png)] max-md:hidden bg-no-repeat bg-contain bg-left "
+              "bg-[url(./vector-short-curv.png)] max-md:hidden bg-no-repeat bg-contain bg-left "
             } ${
               (index === 0 || index === 4) &&
-              "bg-[url(/src/assets/long-arrow.png)] max-md:hidden bg-no-repeat bg-top bg-[length:80%]"
+              "bg-[url(./long-arrow.png)] max-md:hidden bg-no-repeat bg-top bg-[length:80%]"
             } ${
               (index === 20 || index === 6) &&
-              "bg-[url(/src/assets/long-arrow-left.png)] max-md:hidden bg-no-repeat bg-top bg-[length:80%]"
+              "bg-[url(./long-arrow-left.png)] max-md:hidden bg-no-repeat bg-top bg-[length:80%]"
             } `}
           >
             <div

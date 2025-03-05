@@ -52,7 +52,7 @@ export default function JoinNetwork() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         className="hidden lg:block full"
       >
-        <img src="/src/assets/three-curvy-lines.png" alt="" className="w-72" />
+        <img src="./three-curvy-lines.png" alt="" className="w-72" />
       </motion.div>
 
       {/* Right Side Cards  mt-10 lg:mt-0 lg:w-1/2 flex flex-col space-y-6 relative*/}
@@ -66,15 +66,15 @@ export default function JoinNetwork() {
         <div className="flex flex-col lg:space-y-20 space-y-6">
           {[
             {
-              icon: "/src/assets/user-group-02.svg",
+              icon: "./user-group-02.svg",
               text: "In-person seminars with blockchain specialists",
             },
             {
-              icon: "/src/assets/blockchain-06.svg",
+              icon: "./blockchain-06.svg",
               text: "Exclusive Web3 networking gatherings to meet industry leaders.",
             },
             {
-              icon: "/src/assets/nano-technology.svg",
+              icon: "./nano-technology.svg",
               text: "A developer community for continuous mentoring.",
             },
           ].map((item, index) => (

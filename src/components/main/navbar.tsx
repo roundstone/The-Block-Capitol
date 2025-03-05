@@ -51,7 +51,7 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
       >
         <img
-          src="/src/assets/main-logo.png"
+          src="./main-logo.png"
           alt="Logo"
           width={50}
           height={50}

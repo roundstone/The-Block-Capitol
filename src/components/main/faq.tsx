@@ -56,9 +56,7 @@ export default function FAQ() {
               >
                 <div className="flex justify-between items-center">
                   <span>{faq.question}</span>
-                  {selected === index && (
-                    <img src="/src/assets/q-badge.svg" alt="" />
-                  )}
+                  {selected === index && <img src="./q-badge.svg" alt="" />}
                 </div>
                 {selected === index && (
                   <motion.div
@@ -83,7 +81,7 @@ export default function FAQ() {
             transition={{ duration: 0.3 }}
             className="w-full bg-[#F6BFA3] h-full p-6 mt-4 rounded-lg"
           >
-            <img src="/src/assets/a-badge.svg" alt="" />
+            <img src="./a-badge.svg" alt="" />
             <p className="mt-2 text-black">
               {selected !== null && faqs[selected].answer}
             </p>

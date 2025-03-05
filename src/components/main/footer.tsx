@@ -14,7 +14,7 @@ const Footer = () => {
       {/* Logo and Subscription */}
       <div className="flex flex-col md:flex-row items-center justify-between border-b border-gray-700 pb-4">
         <motion.img
-          src="/src/assets/footer-logo.png"
+          src="./footer-logo.png"
           alt="Block Capitol Logo"
           className="w-24"
           initial={{ opacity: 0, y: -10 }}

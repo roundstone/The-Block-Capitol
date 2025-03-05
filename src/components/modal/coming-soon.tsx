@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../form/button";
+import React from "react";
 
 interface ComingSoonProps {
   isModalOpen: boolean;
@@ -14,7 +15,7 @@ const ComingSoon: React.FC<ComingSoonProps> = ({
     <AnimatePresence>
       {isModalOpen && (
         <motion.div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+          className="fixed inset-0 flex items-center justify-center bg-opacity-50 backdrop-blur-sm z-30"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

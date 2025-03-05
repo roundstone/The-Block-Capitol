@@ -5,7 +5,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="relative -bg-gradient-to-r from-red-50 to-white text-center px-6md:px-12lg:px-24 py-12 bg-[url(/src/assets/hero-image.png)] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden">
+    <section className="relative -bg-gradient-to-r from-red-50 to-white text-center px-6md:px-12lg:px-24 py-12 bg-[url(./hero-image.png)] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden">
       {/* Navigation Bar */}
       <Navbar />
 
@@ -50,7 +50,7 @@ export default function HeroSection() {
             className="relative z-10 w-[300px] md:w-[400px] lg:w-[500px] border-[10px] border-[#FFD2D2] rounded-[48px] shadow-lg overflow-hidden "
           >
             <img
-              src="/src/assets/hero-lady.png" // Update with your image path
+              src="./hero-lady.png" // Update with your image path
               alt="Focused Woman"
               width={500}
               height={400}
@@ -62,10 +62,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0, rotate: 5 }}
             transition={{ duration: 1 }}
-            className="absolute -left-14 lg:left-72  -bottom10 w-[250px] md:w-[450px] border-[10px] border-[#FFD2D2] rounded-[48px] shadow-lg overflow-hidden"
+            className="absolute -left-14 lg:left-32  xl:left-72  -bottom10 w-[250px] md:w-[450px] border-[10px] border-[#FFD2D2] rounded-[48px] shadow-lg overflow-hidden"
           >
             <img
-              src="/src/assets/group-1.png" // Update with your image path
+              src="./group-1.png" // Update with your image path
               alt="Group Collaboration"
               width={450}
               height={150}
@@ -76,10 +76,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 50, scale: 1.2 }}
             animate={{ opacity: 1, x: 0, rotate: -3, scale: 1 }}
             transition={{ duration: 1 }}
-            className="absolute -right-10 lg:right-72  -bottom10 w-[250px] md:w-[450px] border-[10px] border-[#FFD2D2] rounded-[48px] shadow-lg overflow-hidden"
+            className="absolute -right-10 lg:right-32  xl:right-72  -bottom10 w-[250px] md:w-[450px] border-[10px] border-[#FFD2D2] rounded-[48px] shadow-lg overflow-hidden"
           >
             <img
-              src="/src/assets/group-2.png" // Update with your image path
+              src="./group-2.png" // Update with your image path
               alt="Teamwork"
               width={450}
               height={150}
