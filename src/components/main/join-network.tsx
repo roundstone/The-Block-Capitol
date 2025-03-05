@@ -52,7 +52,7 @@ export default function JoinNetwork() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         className="hidden lg:block full"
       >
-        <img src="src/assets/three-curvy-lines.png" alt="" className="w-72" />
+        <img src="/src/assets/three-curvy-lines.png" alt="" className="w-72" />
       </motion.div>
 
       {/* Right Side Cards  mt-10 lg:mt-0 lg:w-1/2 flex flex-col space-y-6 relative*/}

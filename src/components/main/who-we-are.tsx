@@ -38,7 +38,7 @@ export default function WhoWeAre() {
           {["/d-1.png", "/d-2.png", "/d-1.png"].map((src, index) => (
             <div key={index} className="w-[150px] h[170px] overflow-hidden ">
               <img
-                src={"src/assets/" + src}
+                src={"/src/assets/" + src}
                 alt={`image${index + 1}`}
                 // width={293.87}
                 height={"608.06px"}
