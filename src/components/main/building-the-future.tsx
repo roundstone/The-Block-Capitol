@@ -9,7 +9,7 @@ export default function BuildingTheFuture() {
 
   return (
     <div className="bg-white p-12 app_container" ref={ref}>
-      <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 bg-red-50 rounded-2xl gap-10">
+      <section className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 bg-[#FEF0EE] rounded-2xl gap-10">
         {/* Image Section */}
         <div className="w-full flex justify-center items-center">
           <motion.div
@@ -36,7 +36,7 @@ export default function BuildingTheFuture() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           className="mt-6 lg:mt-0 w-full text-center lg:text-right mr-0 lg:mr-12"
         >
-          <h1 className="text-3xl lg:text-4xl font-bold text-secondary leading-snug">
+          <h1 className="text-2xl lg:text-4xl font-bold text-secondary leading-snug">
             Building the Future of <br /> Blockchain, Together
           </h1>
 
@@ -65,12 +65,12 @@ export default function BuildingTheFuture() {
             <Button
               text="Start Your Journey"
               variant="primary"
-              className="!min-w-[200px]"
+              className=""
             />
             <Button
               text="Explore Programs"
               variant="secondary"
-              className="!min-w-[200px]"
+              className=""
             />
           </div>
         </motion.div>

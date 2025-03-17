@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "Home", link: "/" },
@@ -79,8 +80,8 @@ const Navbar = () => {
         Join Cohort
       </motion.button>
       <div className="md:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-secondary">
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        <button onClick={toggleMenu} className="text-dark">
+          {isOpen ? <X /> : <Menu size={20} />}
         </button>
       </div>
       {isOpen && (
@@ -88,21 +89,23 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute top-20 left-0 right-0 flex flex-col items-center space-y-4 py-4 text-secondary font-medium md:hidden bg-gradient-to-r from-red-50 to-white"
+          className="absolute top-20 left-0 right-0 flex flex-col itemscenter space-y-4 p-4 text-secondary text-left font-medium md:hidden h-screen bg-white"
         >
-          {navItems.map(({ name, link }) => (
-            <li key={name} className="relative group cursor-pointer">
-              <Link
-                to={link}
-                className="hover:text-red-800 transition-colors duration-300"
-                onClick={toggleMenu}
-              >
-                {name}
-              </Link>
-              <span className="absolute left-0 right-0 -bottom-1 h-0.5 bg-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </li>
-          ))}
-          <button className="bg-secondary hover:bg-red-700 text-white px-4 py-2 rounded">
+          {navItems
+            .filter(({ name }) => name !== "Home")
+            .map(({ name, link }) => (
+              <li key={name} className="relative group cursor-pointer px-3">
+                <Link
+                  to={link}
+                  className="hover:text-red-800 transition-colors duration-300"
+                  onClick={toggleMenu}
+                >
+                  {name}
+                </Link>
+                <span className="absolute left-0 right-0 -bottom-1 h-0.5 bg-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </li>
+            ))}
+          <button className="bg-secondary hover:bg-red-700 text-white px-4 py-3 rounded">
             Join Cohort
           </button>
         </motion.ul>

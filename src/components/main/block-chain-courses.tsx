@@ -8,7 +8,7 @@ const BlockchainCourses = () => {
   const isInView = useIsInView(ref);
 
   return (
-    <section ref={ref} className="bg-[#FFF7F2] py-16 px-6 md:px-12 ">
+    <section ref={ref} className="bg-[#FCF2E8] py-16 px-6 md:px-12 ">
       <div className="max-w-5xl mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -31,7 +31,7 @@ const BlockchainCourses = () => {
         </motion.p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
+      <div className="hidden md:grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
         {courses.map((course, index) => (
             <motion.div
             key={index}
@@ -82,13 +82,56 @@ const BlockchainCourses = () => {
         ))}
       </div>
 
+      <div className="md:hidden grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
+        {courses.map((course, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: index * 0.2, duration: 0.6 }}
+            
+          >
+            <div className="">
+              <h3 className="max-md:hidden mb-4 text-2xl font-medium max-sm:text-xl text-[#FF6B4A]">
+                {course.title}
+              </h3>
+
+              <div className="flex flex-col">
+                <div className="flex items-center  gap-3">
+                  <div>
+                    <div
+                      className="w-5 h-5 bg-primary hexagon"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-medium max-sm:text-xl text-primary">
+                    {course.title}
+                  </h3>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-it mx-auto pl-1">
+                    <img src="/src/assets/arrow-down.png" className="h-full w-3" alt="" />
+                  </div>
+                  <div className="w-full ml-1">
+                    <p className="text-base font-light leading-normal text-[#818284]">
+                      {course.description}
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
       <motion.div
         initial={{ scale: 0.9 }}
         animate={isInView ? { scale: 1 } : {}}
         transition={{ duration: 0.5 }}
-        className="mt-12 text-center"
+        className="mt-12 text-center w-full"
       >
-        <Button text="Join Cohort" variant="primary" />
+        <Button text="Join Cohort" variant="primary"className="max-md:w-full" />
       </motion.div>
     </section>
   );

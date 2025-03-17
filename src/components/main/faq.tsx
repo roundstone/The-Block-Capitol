@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../form/button";
 import React from "react";
@@ -27,7 +27,14 @@ const faqs = [
 export default function FAQ() {
   const [selected, setSelected] = useState<number | null>(0);
   const ref = useRef(null);
+  const answerRef = useRef<HTMLDivElement>(null);
   const isInView = useIsInView(ref);
+
+  useEffect(() => {
+    if (selected !== null && window.innerWidth < 768) {
+      answerRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [selected]);
 
   return (
     <section className="bg-dark text-white py-12 app_container" ref={ref}>
@@ -42,15 +49,17 @@ export default function FAQ() {
       </div>
       <div className="bg-white p-6 md:p-10 rounded-lg flex flex-col md:flex-row gap-6 ">
         <div className="w-full md:w-1/2">
-          <h2 className="text-[64px] font-bold text-primary">FAQs.</h2>
+          <h2 className="text-[32px] md:text-[64px] font-bold text-primary">
+            FAQs.
+          </h2>
           <ul className="mt-4 space-y-5">
             {faqs.map((faq, index) => (
               <li
                 key={index}
-                className={`font-bold p-4 rounded-lg cursor-pointer transition-all ${
+                className={`font-medium p-3 rounded-lg cursor-pointer transition-all ${
                   selected === index
                     ? "bg-dark text-white"
-                    : "text-primary bg-gray-100"
+                    : "text-primary bg-[#0C513F05] border border-[#E7EEEC]"
                 }`}
                 onClick={() => setSelected(selected === index ? null : index)}
               >
@@ -58,22 +67,14 @@ export default function FAQ() {
                   <span>{faq.question}</span>
                   {selected === index && <img src="./q-badge.svg" alt="" />}
                 </div>
-                {selected === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={isInView ? { opacity: 1, height: "auto" } : {}}
-                    transition={{ duration: 0.3 }}
-                    className="md:hidden mt-2 text-gray-300"
-                  >
-                    {faq.answer}
-                  </motion.div>
-                )}
               </li>
             ))}
           </ul>
         </div>
-        <div className="hidden md:block md:w-1/2 h-full">
-          <h2 className="text-[64px] font-bold text-primary ">Ans.</h2>
+        <div className=" md:block md:w-1/2 h-full" ref={answerRef}>
+          <h2 className="text-[32px] md:text-[64px] font-bold text-primary ">
+            Ans.
+          </h2>
           <motion.div
             key={selected}
             initial={{ opacity: 0, x: 20 }}
@@ -88,7 +89,7 @@ export default function FAQ() {
           </motion.div>
         </div>
       </div>
-      <div className="mt-10 flex flex-col md:flex-row justify-center gap-4 max-md:px-12">
+      <div className="mt-10 flex flex-col md:flex-row justify-center gap-4 max-md:px12">
         <Button variant="primary" text="Register for Cohort" />
         <Button variant="light" text="Contact Us" />
       </div>

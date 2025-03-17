@@ -27,7 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
   const styles = {
     primary: "bg-primary hover:bg-secondary",
     secondary: "bg-dark hover:bg-gray-800",
-    light: "bg-white !text-dark hover:bg-gray-100",
+    light: "bg-[#E5E5E5] !text-dark hover:bg-gray-100",
   };
 
   return (

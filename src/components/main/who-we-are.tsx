@@ -37,7 +37,7 @@ export default function WhoWeAre() {
         <motion.img
           src="./brush-strokes.png"
           alt=""
-          className="absolute left-1/2 top-28 transform -translate-x-1/2 max-w-[256.47px] w-full hidden lg:block"
+          className="absolute left-1/2 top-28 max-md:top-33 transform -translate-x-1/2 max-w-[256.47px] max-md:max-w-[206.47px] w-full hidde lg:block"
           width="100%"
           height="auto"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -45,14 +45,17 @@ export default function WhoWeAre() {
           transition={{ delay: 0.3, duration: 0.6 }}
         />
 
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex max-md:flex-col items-center justify-center gap-4 mt-6">
           {["/d-1.png", "/d-2.png", "/d-1.png"].map((src, index) => (
-            <div key={index} className="w-[150px] h[170px] overflow-hidden ">
+            <div
+              key={index}
+              className="w-[150px] max-md:w-[250px] h[170px] overflow-hidden "
+            >
               <img
                 src={"./" + src}
                 alt={`image${index + 1}`}
                 // width={293.87}
-                height={"608.06px"}
+                // height={"608.06px"}
                 className="hexago object-cover"
               />
             </div>
@@ -61,10 +64,12 @@ export default function WhoWeAre() {
 
         <div className="pt-16">
           <p className=" text-gray-700 max-w-3xl mx-auto">
-            The BlockCapitol serves as a launchpad for Web3 developers, not a
+            Block Capitol serves as a launchpad for Web3 developers, not a
             regular learning platform. Our structured courses focus on
             real-world blockchain applications, 1-on-1 mentorship, and career
-            development opportunities.
+            development opportunities within the industry. Regardless of your
+            level of experience, our method ensures you are prepared for the
+            industry.
           </p>
         </div>
 
