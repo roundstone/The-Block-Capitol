@@ -110,7 +110,7 @@ const BlockchainCourses = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-it mx-auto pl-1">
-                    <img src="/src/assets/arrow-down.png" className="h-full w-3" alt="" />
+                    <img src="./arrow-down.png" className="h-full w-3" alt="" />
                   </div>
                   <div className="w-full ml-1">
                     <p className="text-base font-light leading-normal text-[#818284]">
