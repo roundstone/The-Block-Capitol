@@ -36,7 +36,7 @@ export default function BuildingTheFuture() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           className="mt-6 lg:mt-0 w-full text-center lg:text-right mr-0 lg:mr-12"
         >
-          <h1 className="text-3xl lg:text-4xl font-bold text-[#FF2F00] leading-snug">
+          <h1 className="text-3xl lg:text-4xl font-bold text-secondary leading-snug">
             Building the Future of <br /> Blockchain, Together
           </h1>
 

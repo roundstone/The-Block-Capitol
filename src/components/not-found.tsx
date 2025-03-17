@@ -8,7 +8,7 @@ const NotFoundPage = () => {
     <div className="flex min-h-screen flex-col bg-[#F8FAFC]">
       <div className="flex grow items-center px-6 xl:px-10">
         <div className="mx-auto text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-[#FF2F00]">
+          <h3 className="text-3xl md:text-4xl font-bold text-secondary">
             Sorry, the page was not found
           </h3>
           <p className="mt-3 text-sm leading-loose text-gray-500 lg:mt-6 lg:text-base lg:leading-loose">

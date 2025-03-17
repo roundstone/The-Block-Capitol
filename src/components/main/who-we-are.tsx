@@ -20,7 +20,7 @@ export default function WhoWeAre() {
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-bold text-[#FF2F00]"
+          className="text-3xl md:text-5xl font-bold text-secondary"
         >
           The Decentralized Environment.
         </motion.h1>
@@ -33,13 +33,7 @@ export default function WhoWeAre() {
           Practical instructions, experienced coaching, and a lively community,
           all in one place.
         </motion.p>
-        {/* <img
-          src="./brush-strokes.png"
-          alt=""
-          className="absolute left-1/2 top-28 transform -translate-x-1/2"
-          width={336.47}
-          height={28.37}
-        /> */}
+
         <motion.img
           src="./brush-strokes.png"
           alt=""
@@ -50,16 +44,6 @@ export default function WhoWeAre() {
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ delay: 0.3, duration: 0.6 }}
         />
-
-        {/* <motion.p
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-4 text-gray-700"
-        >
-          Practical instructions, experienced coaching, and a lively community,
-          all in one place.
-        </motion.p> */}
 
         <div className="flex justify-center gap-4 mt-6">
           {["/d-1.png", "/d-2.png", "/d-1.png"].map((src, index) => (

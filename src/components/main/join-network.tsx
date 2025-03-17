@@ -18,7 +18,7 @@ export default function JoinNetwork() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-[509px] text-center md:text-left"
       >
-        <h1 className="text-3xl lg:text-5xl font-extrabold text-black leading-tight">
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-dark leading-tight">
           Join a Network of <br /> Engineers, Builders, <br /> and Innovators{" "}
           <br />
           Changing Web3

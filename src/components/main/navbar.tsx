@@ -50,18 +50,13 @@ const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <img
-          src="./main-logo.png"
-          alt="Logo"
-          width={50}
-          height={50}
-        />
+        <img src="./main-logo.png" alt="Logo" width={50} height={50} />
       </motion.div>
       <motion.ul
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="hidden md:flex space-x-6 text-[#FF2F00] font-medium"
+        className="hidden md:flex space-x-6 text-secondary font-medium"
       >
         {navItems.map(({ name, link }) => (
           <li key={name} className="relative group cursor-pointer">
@@ -79,12 +74,12 @@ const Navbar = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="hidden md:block bg-[#FF2F00] hover:bg-red-700 text-white px-4 py-2 rounded"
+        className="hidden md:block bg-secondary hover:bg-red-700 text-white px-4 py-2 rounded"
       >
         Join Cohort
       </motion.button>
       <div className="md:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-[#FF2F00]">
+        <button onClick={toggleMenu} className="text-secondary">
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
@@ -93,7 +88,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute top-20 left-0 right-0 flex flex-col items-center space-y-4 py-4 text-[#FF2F00] font-medium md:hidden bg-gradient-to-r from-red-50 to-white"
+          className="absolute top-20 left-0 right-0 flex flex-col items-center space-y-4 py-4 text-secondary font-medium md:hidden bg-gradient-to-r from-red-50 to-white"
         >
           {navItems.map(({ name, link }) => (
             <li key={name} className="relative group cursor-pointer">
@@ -107,7 +102,7 @@ const Navbar = () => {
               <span className="absolute left-0 right-0 -bottom-1 h-0.5 bg-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </li>
           ))}
-          <button className="bg-[#FF2F00] hover:bg-red-700 text-white px-4 py-2 rounded">
+          <button className="bg-secondary hover:bg-red-700 text-white px-4 py-2 rounded">
             Join Cohort
           </button>
         </motion.ul>

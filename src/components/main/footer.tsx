@@ -37,7 +37,7 @@ const Footer = () => {
               aria-label="Email address"
             />
           </label>
-          <button className="bg-[#FF2F00] px-4 py-2 hover:bg-red-700 flex justify-center items-center self-stretch my-auto font-medium tracking-wide leading-none text-white whitespace-nowrap min-h-12">
+          <button className="bg-secondary px-4 py-2 hover:bg-red-700 flex justify-center items-center self-stretch my-auto font-medium tracking-wide leading-none text-white whitespace-nowrap min-h-12">
             Subscribe
           </button>
         </div>

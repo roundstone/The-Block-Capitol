@@ -11,7 +11,6 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="pt-24 ">
-        {" "}
         {/* Add padding-top to avoid overlap with sticky navbar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +19,7 @@ export default function HeroSection() {
           className="mt-10 text-center max-md:px-12"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
-            Make the Switch to <span className="text-red-500 italic">Web3</span>
+            Make the Switch to <span className="text-primary italic">Web3</span>
           </h1>
           <p className="text-gray-700 mt-4">
             Don’t limit it to just web2 development; decentralize your skills
